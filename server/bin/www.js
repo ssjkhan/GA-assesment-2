@@ -1,4 +1,4 @@
-import app from "../server.js";
+import middleware from "../server.js";
 import debugLib from "debug";
 import http from "http";
 
@@ -6,10 +6,10 @@ const debug = debugLib("project-2:server");
 
 // Get port from environment and store in Express.
 var port = normalizePort(process.env.PORT || "3000");
-app.set("port", port);
+middleware.set("port", port);
 
 // Create HTTP server.
-var server = http.createServer(app);
+var server = http.createServer(middleware);
 
 // Listen on provided port, on all network interfaces.
 server.listen(port);
