@@ -3,7 +3,10 @@ class ToDo {
 		this.name = name;
 		this.description = description;
 		this.isDone = false;
+		this.iD = counter++;
 	}
+
+	static counter = 0;
 
 	isDone() {
 		return this.isDone;
