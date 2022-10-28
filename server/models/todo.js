@@ -1,15 +1,14 @@
 class ToDo {
-	constructor(name, description) {
-		this.name = name;
-		this.description = description;
-		this.isDone = false;
-		this.iD = counter++;
+	constructor(title) {
+		this.title = title;
+		this.status = false;
+		this.iD = ToDo.counter++;
 	}
 
 	static counter = 0;
 
 	isDone() {
-		return this.isDone;
+		return this.status === false ? "Lots to do!" : "Done and dusted!";
 	}
 
 	complete() {

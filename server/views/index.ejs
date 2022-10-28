@@ -14,5 +14,31 @@
 	</head>
 	<body>
 		<h1>To Do List</h1>
+		<div class="toDos">
+			<% if (args.todos.length < 1) {%>
+			<h2>There are no todos yet!</h2>
+			<%} else {%>
+			<ul>
+				<% args.todos.forEach( todo => {%>
+				<li><%= todo.title %>:&#9;<%= todo.isDone() %></li>
+				<% })} %>
+			</ul>
+		</div>
+		<div class="addTodo">
+			<form
+				action="/"
+				method="post"
+			>
+				<input
+					type="text"
+					name="title"
+					required
+				/>
+				<input
+					type="submit"
+					value="Add a Todo!"
+				/>
+			</form>
+		</div>
 	</body>
 </html>

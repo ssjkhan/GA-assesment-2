@@ -5,8 +5,9 @@ function getToDos() {
 	return database.todos;
 }
 
-function addToDo(name, description) {
-	var todo = new Todo(name, description);
+function addToDo(title) {
+	var todo = new Todo(title);
+	console.log(todo);
 	database.todos.push(todo);
 }
 

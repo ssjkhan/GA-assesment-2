@@ -6,7 +6,7 @@ const router = express.Router();
 
 // mount routes
 router.get("/", Controller.main);
-
+router.post("/", Controller.add);
 // other requests
 
 export { router as default };
